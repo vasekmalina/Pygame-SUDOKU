@@ -26,9 +26,7 @@ RED = (255,0,0)
 GREEN = (0,255,0)
 CRIMSON = (220,20,60)
 
-KEYS = {K_KP1: 1, K_KP2: 2, K_KP3: 3, K_KP4: 4, K_KP5: 5, K_KP6: 6, K_KP7: 7, K_KP8: 8, K_KP9: 9,}
-
-REMOVE = 20
+REMOVE = 20 #number of sqaures tha will be left blank
 
 #getting argument for pygame.draw.line for drawing grid
 row_lines = []
@@ -197,8 +195,7 @@ def main():
                 except:
                     print("invalid value")
                     selected = False
-
-            #TRY TO THINK OF SOMETHING BETTER WHICH WOULD USE THAT DICTIONARY UP THERE
+                    
             if event.type == pygame.KEYDOWN and selected and num == 0:
                 key = None
                 if event.key == K_KP1: key = 1
